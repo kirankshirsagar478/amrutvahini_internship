@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Link Banner Ads</title>
+<script language="Javascript" type="text/javascript">
+Banners = new Array('image1.jpg','image2.jpg','image3.jpg')
+BannerLink = new Array(
+'google.com/','vpt.edu.in/', 'msbte.org.in/');
+CurrentBanner = 0;
+NumOfBanners = Banners.length;
+function LinkBanner()
+{
+document.location.href =
+"http://www." + BannerLink[CurrentBanner];
+}
+function DisplayBanners() {
+if (document.images) {
+CurrentBanner++
+if (CurrentBanner == NumOfBanners) {
+CurrentBanner = 0
+}
+document.RotateBanner.src= Banners[CurrentBanner]
+setTimeout("DisplayBanners()",1000)
+}
+}
+</script>
+</head>
+<body onload="DisplayBanners()" >
+<center>
+<a href="javascript: LinkBanner()"><img src="image1.jpg"
+width="600" height="600" name="RotateBanner" /></a>
+</center>
+</body> </html>

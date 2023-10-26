@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Upload Resume</title>
+
+    <!-- Css linked -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <script src="../JavaScript/script.js"></script>
+    <!-- kiran work started -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- kiran work ended  -->
+
+
+
+    <style>
+        .progresses {
+            display: flex;
+            align-items: center;
+        }
+
+        .line {
+            width: 5rem;
+            height: 3px;
+            background: #22CFB9;
+            flex-grow: 1;
+
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Center text horizontally */
+        }
+
+        .step-text {
+            margin-top: 5px;
+            font-size: 0.5rem;
+            font-family: Poppins-medium;
+
+            /* Adjust the margin to control the spacing between the circle and text */
+        }
+
+        .step span {
+            display: block;
+            /* Ensure the icon and text are on separate lines */
+        }
+
+        .step i {
+            background-color: #BDBDBD;
+            ;
+            color: #fff;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .currentsectionstext {
+
+            margin-top: 5px;
+            font-size: 0.8rem;
+            font-family: Poppins-semibold;
+
+
+        }
+
+        .mobilecard {
+            padding-left: 5rem;
+        }
+
+        .selectedline {}
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+        }
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+            .mobilecard {
+                padding-left: 2rem;
+            }
+
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            /* Remove default outline and use border or box-shadow */
+            box-shadow: 2px solid #000;
+            /* Full freedom. (works also with border-radius) */
+        }
+    </style>
+
+
+</head>
+
+
+<body style="background-color: #F0F1F2; padding-top: 90px;">
+    <!-- Navbar start here -->
+    <nav class="navbar fixed-top shadow navbar-expand-xxl   bg-white rounded"
+        style="z-index: 100000; padding-right: 2rem;">
+        <div class="container-fluid h-100 d-flex align-items-left justify-content-right"
+            style="background-color: white;">
+            <a class="navbar-brand" href="#" style="color: #25c3ae; font-weight: 600; font-size: xx-large; ">
+                <img src="../Assets/Images/logo_with_text.png" alt="Logo" width="150" height="65"
+                    class="d-inline-block align-text-top">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link " href="../index.html" style="font-family: Poppins-semibold;">Search for Internships</a>
+                    <a class="nav-link" href="../Pages/contact.html" style="font-family: Poppins-semibold;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navbar end -->
+
+    <!-- main content starts -->
+
+    <div class="container col-md-6 card_container_every_page">
+        <div class=" shadow">
+            <div class="col-sm col-md col-lg mt-0 custom-column">
+                <div class="card" style="width: 100%; border: none;">
+                    <div class="card-body mobilecard" style="margin-top: 1rem; ">
+                        <!-- heading start here -->
+                        <a class="job_posting_label" href="../index.html"> <i class="fa fa-arrow-left"></i> Back to Job
+                            Posting</a>
+                        <div class="head-container h-100 d-flex align-items-center justify-content  ">
+                            <h4 id="userSelectedPosition" name="userSelectedPosition" class="designation_on_forms">
+                                Associate Software Engineer
+                            </h4>
+                        </div>
+
+                        <!-- heading end -->
+
+                        <br><br>
+
+
+
+                        <!-- search bar end -->
+
+                        <!-- Steps start here -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <div class="progresses">
+                                <div class="step">
+                                    <span><i style=" background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Basic Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text">Education Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="width: 1.5rem; height: 1.5rem; background-color: #22CFB9;"
+                                            class="fa fa-circle"></i></span>
+                                    <span class="step-text currentsectionstext">Upload Resume</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Additional Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Terms & Conditions</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Review</span>
+                                </div>
+                                <!-- Add more steps as needed -->
+                            </div>
+                        </div>
+                        <!-- Steps end here -->
+
+                        <h4 class="card-title mb-3"
+                            style="padding-top: 5%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center;">
+                            Upload Resume
+                        </h4><br>
+
+
+                        <label for="inputState" class="form-label"
+                            style=" font-family: Poppins-regular; font-size: 0.8rem;"><span
+                                style="color: red; font-family: Poppins-semibold;">*</span> indicates a required
+                            field</label>
+                        <br>
+
+                        <form class="needs-validation" id="userResumeUplodForm" method="POST" name="userResumeUplodForm"
+                            action="additional_details.html" novalidate>
+                            <div class="card shadow"
+                                style="width: auto; border: none; border-radius: 0.5rem; margin-right: 2rem;">
+                                <div class="card-body">
+                                    <section>
+                                        <center>
+                                            <div style="padding-top: 4rem; padding-bottom: 4rem;"
+                                                id="fileUploadContainer">
+                                                <label for="fileInput" style="cursor: pointer;">
+                                                    <img src="../Assets/Images/upload_file.png"
+                                                        style="width: 5rem; height: 5rem;" /><br>
+                                                    <label
+                                                        style="font-family: Poppins-semibold; margin-top: 1rem;">Click
+                                                        icon to select file</label><br>
+                                                    <label
+                                                        style="font-family: Poppins-regular; margin-top: 1rem; font-size: 0.6rem; margin-top: -3rem;">Upload
+                                                        a file (5MB Max)</label>
+                                                </label>
+                                                <!-- <input type="file" id="fileInput" class="file_input" name="file" accept=".pdf, .docx, .doc" style="display: none;" required> -->
+                                                <input type="file" id="fileInput" class="file_input"
+                                                    accept=".pdf, .docx, .doc .mp4" name="file" style="display: none;"
+                                                    required>
+                                            </div>
+                                        </center>
+                                    </section>
+                                </div>
+                            </div>
+
+
+
+                            <div id="userSelectedFileDetails" name="userSelectedFileDetails" class="card shadow"
+                                style="margin-top: 2rem; width: max-content; max-width: 20rem; border: none; border-radius: 0.5rem; margin-right: 2rem; display: none; text-overflow:ellipsis; white-space: nowrap; overflow: hidden;">
+                                <div class="card-body">
+                                    <center>
+
+                                        <div style="">
+                                            <label id="userSelectedFileName" name="userSelectedFileName"
+                                                style="font-family: Poppins-semibold; font-size: 0.8rem;">jon_deo_resume.pdf</label><br/>
+                                        </div>
+                                    </center>
+                                    <section class="progress-area"></section>
+                                    <section class="uploaded-area"></section>
+                                    <!-- <label style="font-family: Poppins-medium; font-size: 0.7rem;">uploaded</label> -->
+                                    <!-- <label id="userSelectedFileSize"
+                                        style="float: right; margin-top: 0.3rem; font-family: Poppins-medium; font-size: 0.7rem;">none</label> -->
+                                    <!-- <div>
+                                    <li class="row">
+                                        <div class="content upload">
+                                          <div class="details">
+                                            <label style="font-family: Poppins-medium; font-size: 0.7rem;">uploaded</label>
+                                            <span class="size">File Size: ${fileSize}</span>
+                                          </div>
+                                        </div>
+                                      </li>
+                                </div> -->
+                                </div>
+                            </div>
+
+
+                            <!-- footer start -->
+                            <div class="head-container h-100 d-flex align-items-center justify-content-center">
+                                <h6
+                                    style="padding-top: 2%; color: black; font-family: Poppins-medium; font-size: 0.8rem;">
+                                    © 2023 Amrutvahini Internship. All Rights Reserved.</h6>
+                            </div>
+                            <!-- footer end -->
+
+                            <div class="rows" style="display: flex; justify-content: space-between;">
+
+                                <div class="cols"></div>
+                                <div class="cols"></div>
+                                <div class="cols">
+
+                                    <button type="button" onclick="goBack()" class="btn btn-rounded"
+                                        data-mdb-ripple-color="dark"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Back</button>
+
+                                    <button type="submit" id="submitBtn" class="btn btn-rounded"
+                                        data-mdb-ripple-color="dark"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Save
+                                        & Continue</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content end -->
+
+    <!-- footer start -->
+    <div class="head-container h-100 d-flex align-items-center justify-content-center">
+        <h6 style="padding-top: 2%; color: #888888;">All Rights Reserved @Amrutvahini Internship</h6>
+    </div>
+    <!-- footer end -->
+
+    <!-- edit as per your need -->
+    <script>
+        progressArea = document.querySelector(".progress-area"),
+            uploadedArea = document.querySelector(".uploaded-area");
+        var userSelectedPosition = document.getElementById("userSelectedPosition");
+        userSelectedPosition.textContent = getCookie("position");
+        document.getElementById('fileInput').addEventListener('change', function () {
+            const selectedFile = this.files[0];
+            if (selectedFile) {
+                // Check file size (5MB limit)
+                if (selectedFile.size <= 5 * 1024 * 1024 *1024) {
+                    // Valid file size, you can proceed with the file
+                    const fileName = selectedFile.name;
+                    const fileType = fileName.split('.').pop().toLowerCase();
+                    if (fileType === 'pdf' || fileType === 'docx' || fileType === 'doc' || fileType === 'mp4') {
+                        // Valid file type, you can handle the file here
+                        const fileName = selectedFile.name;
+                        const fileSize = formatFileSize(selectedFile.size);
+                        document.getElementById('userSelectedFileName').textContent = 'File Name: ' + fileName;
+                        // document.getElementById('userSelectedFileSize').textContent = 'File Size: ' + fileSize;
+                        document.getElementById('userSelectedFileDetails').style.display = 'block';
+                        // You can send the file to the server or perform any other actions here
+                        uploadFile(fileName); //calling uploadFile with passing file name as an argument
+
+                    } else {
+                        alert('Please upload a PDF, DOCX, or DOC file.');
+                    }
+                } else {
+                    alert('File size exceeds the 5MB limit.');
+                }
+            }
+        });
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+            const i = parseInt(Math.floor(Math.log(bytes) / Math.log(k)));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+
+        document.getElementById("userResumeUplodForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // if (this.checkValidity() && fileInput.files.length > 0) {
+            if (this.checkValidity()) {
+                // Form is valid, and a file is selected, so navigate to additional_details.html
+                window.location.href = "additional_details.html";
+            } else {
+                alert("Please select your valuable resume.");
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+
+
+
+
+
+    </script>
+    <!-- <script>
+        document.getElementById("userResumeUplodForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (this.checkValidity() && fileInput.files.length > 0) {
+                // Form is valid, and a file is selected, so navigate to additional_details.html
+                window.location.href = "additional_details.html";
+            } else {
+                alert("Please select your valuable resume.");
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <script src="../JavaScript/myscripts.js"></script>
+    <script src="../JavaScript/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../JavaScript/fileupload.js"></script> -->
+    <script>
+        const form = document.querySelector("form"),
+            fileInput = document.querySelector(".file-input"),
+            progressArea = document.querySelector(".progress-area"),
+            uploadedArea = document.querySelector(".uploaded-area");
+
+        // form click event
+        form.addEventListener("click", () => {
+            fileInput.click();
+        });
+
+        fileInput.onchange = ({ target }) => {
+            let file = target.files[0]; //getting file [0] this means if user has selected multiple files then get first one only
+            if (file) {
+                let fileName = file.name; //getting file name
+                if (fileName.length >= 12) { //if file name length is greater than 12 then split it and add ...
+                    let splitName = fileName.split('.');
+                    fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
+                }
+                uploadFile(fileName); //calling uploadFile with passing file name as an argument
+            }
+        }
+
+        // file upload function
+        function uploadFile(name) {
+            let xhr = new XMLHttpRequest(); //creating new xhr object (AJAX)
+            xhr.open("POST", "../Resume/upload.php"); //sending post request to the specified URL
+            xhr.upload.addEventListener("progress", ({ loaded, total }) => { //file uploading progress event
+                let fileLoaded = Math.floor((loaded / total) * 100);  //getting percentage of loaded file size
+                let fileTotal = Math.floor(total / 1000); //gettting total file size in KB from bytes
+                let fileSize;
+                // if file size is less than 1024 then add only KB else convert this KB into MB
+                (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB";
+                let progressHTML = `<li class="row">
+                          <div class="content">
+                            <div class="details">
+                              <span class="name" style="font-family: Poppins-medium; font-size: 0.7rem;">Uploading</span>
+                              <span class="percent" style="font-family: Poppins-medium; font-size: 0.7rem;">${fileLoaded}%</span>
+                            </div>
+                            <div class="progress-bar">
+                              <div class="progress" style="width: ${fileLoaded}%"></div>
+                            </div>
+                          </div>
+                        </li>`;
+                // uploadedArea.innerHTML = ""; //uncomment this line if you don't want to show upload history
+                uploadedArea.classList.add("onprogress");
+                progressArea.innerHTML = progressHTML;
+                if (loaded == total) {
+                    progressArea.innerHTML = "";
+                    let uploadedHTML = `<li class="row">
+                            <div class="content upload">
+                              <div class="details">
+                                <label style="font-family: Poppins-medium; font-size: 0.7rem;">uploaded</label>
+                                    <label id="userSelectedFileSize" name="userSelectedFileSize"
+                                        style="float: right; margin-top: 0.3rem; font-family: Poppins-medium; font-size: 0.7rem;">File Size:${fileSize}</label>
+                              </div>
+                            </div>
+                          </li>`;
+                    uploadedArea.classList.remove("onprogress");
+                    // uploadedArea.innerHTML = uploadedHTML; //uncomment this line if you don't want to show upload history
+                    uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML); //remove this line if you don't want to show upload history
+                }
+            });
+            let data = new FormData(form); //FormData is an object to easily send form data
+            xhr.send(data); //sending form data
+        }
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</body>
+
+
+</html>

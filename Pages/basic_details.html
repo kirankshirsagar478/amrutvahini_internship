@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrutvahini Internship | Basic Details</title>
+    <!-- Css linked -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="../CSS/all.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="../CSS/select2.min.css" rel="stylesheet" />
+    <script src="../JavaScript/select2.min.js"></script>
+    <script src="../JavaScript/script.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="../Assets/Images/CodeClause-Recuirt-Logo.png">
+
+    <style>
+        .progresses {
+            display: flex;
+            align-items: center;
+        }
+
+        .line {
+            width: 5rem;
+            height: 3px;
+            background: #22CFB9;
+            flex-grow: 1;
+
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .step-text {
+            margin-top: 5px;
+            font-size: 0.5rem;
+            font-family: Poppins-medium;
+        }
+
+        .step span {
+            display: block;
+        }
+
+        .step i {
+            background-color: #BDBDBD;
+            ;
+            color: #fff;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .currentsectionstext {
+            margin-top: 5px;
+            font-size: 0.8rem;
+            font-family: Poppins-semibold;
+        }
+
+        .mobilecard {
+            padding-left: 5rem;
+        }
+
+        .selectedline {}
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+            }
+
+        }
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+            .mobilecard {
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+
+        }
+
+        /* Change background and text color for select2 */
+        .select2-container .select2-selection--single {
+            height: 2.1rem;
+            font-family: Poppins-semibold;
+            font-family: Poppins-medium;
+            font-size: 0.9rem;
+            color: #494949;
+            padding-top: 0.1rem;
+            padding-left: 0.2rem;
+            border-color: #ced4da;
+        }
+
+        input[type="text"]:focus {
+            border-color: black;
+        }
+
+        .select2-container--default .select2-selection--single:focus {
+            border-color: black;
+        }
+
+        .select2-container--default.select2-container--open .select2-dropdown--below:focus {
+            border-color: black;
+        }
+    </style>
+
+    
+
+</head>
+
+
+<body style="background-color: #F0F1F2; padding-top: 90px;" onload="loadData()" >
+    <!-- Navbar start here -->
+
+    <nav class="navbar fixed-top shadow navbar-expand-xxl   bg-white rounded"
+        style="z-index: 100000; padding-right: 2rem;">
+        <div class="container-fluid h-100 d-flex align-items-left justify-content-right"
+            style="background-color: white;">
+            <a class="navbar-brand" href="#" style="color: #25c3ae; font-weight: 600; font-size: xx-large; ">
+                <img src="../Assets/Images/logo_with_text.png" alt="Logo" width="150" height="65"
+                    class="d-inline-block align-text-top">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link " href="../index.html" style="font-family: Poppins-semibold;">Search for Internship</a>
+                    <a class="nav-link" href="../Pages/contact.html" style="font-family: Poppins-semibold;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar end -->
+
+    <!-- main content starts -->
+
+    <div class="container col-md-6 card_container_every_page">
+        <div class=" shadow">
+            <div class="col-sm col-md col-lg mt-0 custom-column">
+                <div class="card" style="width: 100%; border: none;">
+                    <div class="card-body mobilecard" style="margin-top: 1rem; ">
+                        <!-- heading start here -->
+                        <a class="job_posting_label" href="../index.html"> <i class="fa fa-arrow-left"></i> Back to Job Posting</a>
+                        <div class="head-container h-100 d-flex align-items-center justify-content  ">
+                            <h4 id="userSelectedPosition" name="userSelectedPosition" class="designation_on_forms">Associate Software Engineer
+                            </h4>
+                        </div>
+
+                        <!-- heading end -->
+
+                        <br><br>
+
+                        <!-- Steps start here -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <div class="progresses">
+                                <div class="step">
+                                    <span><i style="width: 1.5rem; height: 1.5rem; background-color: #22CFB9;"
+                                            class="fa fa-circle"></i></span>
+                                    <span class="step-text currentsectionstext">Basic Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Education Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Upload Resume</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Additional Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Terms & Conditions</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Review</span>
+                                </div>
+                                <!-- Add more steps as needed -->
+                            </div>
+                        </div>
+                        <!-- Steps end here -->
+
+
+                        <h4 class="card-title mb-3"
+                            style="padding-top: 5%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center;">
+                            Basic Details
+                        </h4><br>
+
+                        
+                        <form class="needs-validation" id="userBasicDetailsForm" name="userBasicDetailsForm" novalidate>
+                            <label for="inputState" class="form-label"
+                                style=" font-family: Poppins-regular; font-size: 0.8rem;"><span
+                                    style="color: red; font-family: Poppins-semibold;">*</span> indicates a required field</label>
+                            <div class="col-md-6">
+                                <br>
+
+
+                                <label for="inputState" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">How Did
+                                    You Hear About Us? <span style="color: red;">*</span></label>
+                                <select id="userReference" name="userReference" class="form-select"
+                                    style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;" required>
+                                    <option value="" selected>Select one</option>
+                                    <option value="linkedin">Linkedin</option>
+                                    <option value="CodeClause Careers">Amrutvahini Staff</option>
+                                    <option value="Naukari">Naukari</option>
+                                    <option value="Monster">Monster</option>
+                                    <option value="Whatsapp">Whatsapp</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Friends">Friends</option>
+                                    <option value="College">College</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Select a valid option.</label> 
+                                </div>
+                            </div><br>
+
+
+
+
+                            <div class="col-md-6">
+                                <label for="inputState" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Country/Region<span
+                                        style="color: red;">*</span></label>
+                                <select id="countrySelect" name="countrySelect" class="form-select"
+                                    style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none;"
+                                    onchange="updateCallingCode()" required>
+                                    <option value="" selected>Select one</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Select a valid option.</label> 
+                                </div>
+                            </div>
+
+
+
+
+                            <hr style="margin-top: 2rem; margin-bottom: 2rem;">
+                            </hr>
+
+
+                            <div class="col-md-6">
+                                <label for="inputName" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 1rem;">Name</label><br>
+
+
+                                <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">First Name<span style="color: red;">*</span></label> 
+                                <input  type="text" class="form-control" id="userFirstName" name="userFirstName" required style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; " pattern="[A-Za-z]{3,}">
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid first name.</label> 
+                                </div><br>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInputljjdsj" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Middle Name<span style="color: red;"></span></label>
+                                <input type="text" class="form-control" id="userMiddleName" name="userMiddleName"  style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; ">
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid middle name.</label> 
+                                </div><br>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInputjksj" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949; ">Last Name<span style="color: red;">*</span></label>
+                                <input type="text" class="form-control" id="userLastName" name="userLastName" required style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; ">
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid last name.</label> 
+                                </div>
+                                <br>
+                            </div>
+                    
+
+
+                    <hr style="margin-top: 2rem; margin-bottom: 2rem;">
+                    </hr>
+
+
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label" style="font-family: Poppins-semibold; font-size: 1rem;">Contact Details</label><br>
+                        <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Country/Region Phone Code<span style="color: red;">*</span></label>
+                        <select id="countryCodes" name="countryCodes" class="form-select" style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;" disabled required>
+                            <option selected>Select one</option>
+                        </select><br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Mobile Number<span style="color: red;">*</span></label>
+                        <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-medium; font-size: 0.6rem; color: #494949; margin-top: -8rem;">Mobile Number Should be Whatsapp For Further Communication</label>
+                        <input type="number" class="form-control" id="userMobileNumber" name="userMobileNumber" required style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; ">
+                        <div class="invalid-feedback">
+                            <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid mobile number.</label> 
+                        </div>
+                    </div><br>
+
+                    <div class="col-md-6">
+                        <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Alternate Mobile Number</label>
+                        <input type="number" class="form-control" id="userAlternateMobileNumber" name="userAlternateMobileNumber"  style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; ">
+                    </div>
+
+                    
+                    <hr style="margin-top: 2rem; margin-bottom: 2rem;"></hr>
+
+
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Email Address<span style="color: red;">*</span></label><br>
+                        <input type="email" class="form-control" id="userEmailAddress" name="userEmailAddress" required style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; " >
+                        <div class="invalid-feedback">
+                            <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid email address.</label> 
+                        </div>
+                    </div>
+
+
+                    <hr style="margin-top: 2rem; margin-bottom: 2rem;"></hr>
+
+
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label" style="font-family: Poppins-semibold; font-size: 1rem;">Profile Links</label><br>
+                        <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">GitHub Profile Link<span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="userGithubProfile" name="userGithubProfile" required style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; " >
+                        <div class="invalid-feedback">
+                            <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid github profile link.</label> 
+                        </div>
+                    </div><br>
+
+                    <div class="col-md-6">
+                        <label for="formGroupExampleInput" class="form-label" style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">LinkedIn Profile Link<span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="userLinkedinLink" name="userLinkedinLink" required style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none; " >
+                        <div class="invalid-feedback">
+                            <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Enter valid linkedin profile link.</label> 
+                        </div>
+                    </div>
+                        <br>
+                    
+
+                    <hr>
+                    </hr>
+
+
+                    <!-- footer start -->
+                    <div class="head-container h-100 d-flex align-items-center justify-content-center">
+                        <h6 style="padding-top: 2%; color: black; font-family: Poppins-medium; font-size: 0.8rem;">
+                            ©
+                            2023 Amrutvahini Internship. All Rights Reserved.</h6>
+                    </div>
+                    <!-- footer end -->
+
+                    <div class="rows" style="display: flex; justify-content: space-between;">
+
+                        <div class="cols"></div>
+                        <div class="cols"></div>
+                        <div class="cols">
+
+
+
+                            <button type="submit" class="btn btn-rounded" data-mdb-ripple-color="dark" id="saveButton"
+                                style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Save
+                                & Continue</button>
+
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- main content end -->
+
+
+    <script>
+          var userSelectedPosition = document.getElementById("userSelectedPosition");
+          var userReference = document.getElementById("userReference");
+          var countrySelect = document.getElementById("countrySelect");
+          var userFirstName = document.getElementById("userFirstName");
+          var userMiddleName = document.getElementById("userMiddleName");
+          var userLastName = document.getElementById("userLastName");
+          var countryCodes = document.getElementById("countryCodes");
+          var userMobileNumber = document.getElementById("userMobileNumber");
+          var userAlternateMobileNumber = document.getElementById("userAlternateMobileNumber");
+          var userEmailAddress = document.getElementById("userEmailAddress");
+          var userGithubProfile = document.getElementById("userGithubProfile");
+          var userLinkedinLink = document.getElementById("userLinkedinLink");
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get("jobid");
+        const position = urlParams.get("position");
+      
+       
+       setCookie("jobid", jobId, 30);
+       setCookie("position", position, 30);
+       userSelectedPosition.textContent = getCookie("position");
+
+      
+
+        function loadData(){
+            var cookieValue = getCookie("userFirstName");
+            var userReferenceint = parseInt(getCookie("userReferenceSelectedIndex"));
+            var userCountryint = parseInt(getCookie("countrySelectSelectedIndex"));
+            if(cookieValue){
+                $(userReference).prop('selectedIndex',userReferenceint ).change();
+                userFirstName.value=getCookie("userFirstName");
+                userMiddleName.value=getCookie("userMiddleName");
+                userLastName.value=getCookie("userLastName");
+                userMobileNumber.value=getCookie("userMobileNumber");
+                userAlternateMobileNumber.value=getCookie("userAlternateMobileNumber");
+                userEmailAddress.value=getCookie("userEmailAddress");
+                userGithubProfile.value=getCookie("userGithubProfile");
+                userLinkedinLink.value=getCookie("userLinkedinLink");
+                
+            }
+        }
+
+
+
+
+
+
+
+
+        document.getElementById("userBasicDetailsForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (this.checkValidity()) {
+    var userReference = document.getElementById("userReference");
+    var countrySelect = document.getElementById("countrySelect");
+    var userFirstName = document.getElementById("userFirstName");
+    var userMiddleName = document.getElementById("userMiddleName");
+    var userLastName = document.getElementById("userLastName");
+    var countryCodes = document.getElementById("countryCodes");
+    var userMobileNumber = document.getElementById("userMobileNumber");
+    var userAlternateMobileNumber = document.getElementById("userAlternateMobileNumber");
+    var userEmailAddress = document.getElementById("userEmailAddress");
+    var userGithubProfile = document.getElementById("userGithubProfile");
+    var userLinkedinLink = document.getElementById("userLinkedinLink");
+    setCookie("userReferenceSelectedIndex", userReference.selectedIndex);
+    setCookie("countrySelectSelectedIndex", countrySelect.selectedIndex);
+    //setCookie("userReferenceSelectedIndex", userReference.selectedIndex);
+    setCookie("userReference", userReference.value);
+    setCookie("countrySelect", countrySelect.value);
+    setCookie("userFirstName", userFirstName.value);
+    setCookie("userMiddleName", userMiddleName.value);
+    setCookie("userLastName", userLastName.value);
+    setCookie("countryCodes", countryCodes.value);
+    setCookie("userMobileNumber", userMobileNumber.value);
+    setCookie("userAlternateMobileNumber", userAlternateMobileNumber.value);
+    setCookie("userEmailAddress", userEmailAddress.value);
+    setCookie("userGithubProfile", userGithubProfile.value);
+    setCookie("userLinkedinLink", userLinkedinLink.value);
+
+    window.location.href = "educational_details.html";
+  } else {
+  }
+}
+);
+
+
+    </script>
+    <!-- edit as per your need -->
+    <script src="../JavaScript/myscripts.js"></script>
+    <script src="../JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="../JavaScript/load_countries.js"></script>
+
+</body>
+
+</html>

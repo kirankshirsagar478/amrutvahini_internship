@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrutvahini Internship | Basic Details</title>
+    <!-- Css linked -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <script src="../JavaScript/script.js"></script>
+
+
+    <style>
+        .progresses {
+            display: flex;
+            align-items: center;
+        }
+
+        .line {
+            width: 5rem;
+            height: 3px;
+            background: #22CFB9;
+            flex-grow: 1;
+
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Center text horizontally */
+        }
+
+        .step-text {
+            margin-top: 5px;
+            font-size: 0.5rem;
+            font-family: Poppins-medium;
+
+            /* Adjust the margin to control the spacing between the circle and text */
+        }
+
+        .step span {
+            display: block;
+            /* Ensure the icon and text are on separate lines */
+        }
+
+        .step i {
+            background-color: #BDBDBD;
+            ;
+            color: #fff;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .currentsectionstext {
+
+            margin-top: 5px;
+            font-size: 0.8rem;
+            font-family: Poppins-semibold;
+
+
+        }
+
+        .mobilecard {
+            padding-left: 5rem;
+        }
+
+        .selectedline {}
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+        }
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+            .mobilecard {
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            /* Remove default outline and use border or box-shadow */
+            box-shadow: 2px solid #000;
+            /* Full freedom. (works also with border-radius) */
+        }
+    </style>
+</head>
+
+
+<body style="background-color: #F0F1F2; padding-top: 90px;" onload="loadData()">
+    <!-- Navbar start here -->
+
+    <nav class="navbar fixed-top shadow navbar-expand-xxl   bg-white rounded"
+        style="z-index: 100000; padding-right: 2rem;">
+        <div class="container-fluid h-100 d-flex align-items-left justify-content-right"
+            style="background-color: white;">
+            <a class="navbar-brand" href="#" style="color: #25c3ae; font-weight: 600; font-size: xx-large; ">
+                <img src="../Assets/Images/logo_with_text.png" alt="Logo" width="150" height="65"
+                    class="d-inline-block align-text-top">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link " href="../index.html" style="font-family: Poppins-semibold;">Search for Internships</a>
+                    <a class="nav-link" href="../Pages/contact.html" style="font-family: Poppins-semibold;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar end -->
+
+    <!-- main content starts -->
+
+    <div class="container col-md-6 card_container_every_page">
+        <div class=" shadow">
+            <div class="col-sm col-md col-lg mt-0 custom-column">
+                <div class="card" style="width: 100%; border: none;">
+                    <div class="card-body mobilecard" style="margin-top: 1rem; ">
+                        <!-- heading start here -->
+                        <a class="job_posting_label" href="../index.html"> <i class="fa fa-arrow-left"></i> Back to Job Posting</a>
+                        <div class="head-container h-100 d-flex align-items-center justify-content  ">
+                            <h4 id="userSelectedPosition" name="userSelectedPosition" class="designation_on_forms">
+                                Associate Software Engineer
+                            </h4>
+                        </div>
+
+                        <!-- heading end -->
+
+                        <br><br>
+
+
+
+                        <!-- search bar end -->
+
+
+                        <!-- Steps start here -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <div class="progresses">
+                                <div class="step">
+                                    <span><i style=" background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Basic Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text" >Education Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Upload Resume</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style=" background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Additional Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Terms & Conditions</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="width: 1.5rem; height: 1.5rem; background-color: #22CFB9;"
+                                            class="fa fa-circle"></i></span>
+                                    <span class="step-text currentsectionstext">Review</span>
+                                </div>
+                                <!-- Add more steps as needed -->
+                            </div>
+                        </div>
+                        <!-- Steps end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+                        <form>
+                            <h4 class="card-title mb-3"
+                                style="padding-top: 5%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center;">
+                                Review
+                            </h4><br>
+                            <hr style="margin-top: -1rem;">
+
+                            <h4 class="card-title mb-3"
+                                style="padding-top: 1%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center; font-size: 1.4rem;">
+                                Basic Details
+                            </h4><br>
+
+                            <form class="needs-validation" id="userReviewForm" name="userReviewForm" novalidate>
+                                <div class="col-md-6" style="margin-top: -2rem;">
+                                    <br>
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">How Did
+                                        You Hear About Us?</label><br>
+                                        <label for="userReference" id="userReference" name="userReference" class="form-label"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Social Media</label><br>
+                                    
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Country</label><br>
+                                    <label for="inputState" class="form-label" id="countrySelect" name="countrySelect"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">India</label><br>
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Name</label><br>
+                                    <label for="inputState" class="form-label" id="userName" name="userName"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Jon
+                                        Doe</label><br>
+
+
+
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Contact
+                                        Number
+                                        (Whatsapp Number)</label><br>
+                                    <label for="userMobileNumber" class="form-label" id="userMobileNumber"
+                                        name="userMobileNumber"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">+91
+                                        1234567890</label><br>
+
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Email
+                                        Address</label><br>
+                                    <label for="userEmailAddress" class="form-label" id="userEmailAddress"
+                                        name="userEmailAddress"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">abc@codeclause.com</label><br>
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">GitHub
+                                        Profile
+                                        Link</label><br>
+                                    <label for="userGithubProfile" class="form-label" id="userGithubProfile"
+                                        name="userGithubProfile"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">https://github.com/codeclause</label><br>
+
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Linkedin
+                                        profile
+                                        Link</label><br>
+                                    <label for="userLinkedinLink" class="form-label" id="userLinkedinLink"
+                                        name="userLinkedinLink"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">https://linkedin.com/codeclause</label><br>
+                                </div><br>
+
+                                <hr>
+                                <h4 class="card-title mb-3"
+                                    style="padding-top: 1%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center; font-size: 1.4rem;">
+                                    Education Details
+                                </h4><br>
+
+
+                                <div class="col-md-6" style="margin-top: -2rem;">
+                                    <br>
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Education
+                                        Status</label><br>
+                                    <label for="inputState" class="form-label" id="userEducationStatus" name="userEducationStatus"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Graduate</label><br>
+
+                                    <label for="inputState" class="form-label" 
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">College
+                                        Name</label><br>
+                                    <label for="inputState" class="form-label" id="userCollegeName" name="userCollegeName"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Amrutvahini
+                                        College of Engineering </label><br>
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Degree</label><br>
+                                    <label for="inputState" class="form-label" id="userDegree" name="userDegree"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Bachelor
+                                        of
+                                        Engginering</label><br>
+
+
+                                    <label for="inputState" class="form-label" 
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Field of
+                                        Study</label><br>
+                                    <label for="inputState" class="form-label" id="userFieldOfStudy" name="userFieldOfStudy"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Computer
+                                        Engineering</label><br>
+
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Passing/Expected
+                                        Year</label><br>
+                                    <label for="inputState" class="form-label" id="userPassingYear" name="userPassingYear"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">2023</label><br>
+
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">State</label><br>
+                                    <label for="inputState" class="form-label" id="userState" name="userState"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Maharashtra</label><br>
+
+                                </div><br>
+
+                                <hr>
+                                </hr>
+
+
+                                <h4 class="card-title mb-3"
+                                    style="padding-top: 1%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center; font-size: 1.4rem;">
+                                    Additional Details
+                                </h4><br>
+
+
+                                <div class="col-md-6" style="margin-top: -2rem;">
+                                    <br>
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Internship
+                                        Duration</label><br>
+                                    <label for="inputState" class="form-label" id="userInternshipDuration" name="userInternshipDuration"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">1
+                                        Month</label><br>
+
+                                </div><br>
+
+                                <hr>
+                                </hr>
+
+                                <h4 class="card-title mb-3"
+                                    style="padding-top: 1%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center; font-size: 1.4rem;">
+                                    Terms & Conditions
+                                </h4><br>
+
+
+                                <div class="col-md-6" style="margin-top: -2rem;">
+                                    <br>
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Gender</label><br>
+                                    <label for="inputState" class="form-label" id="userSelectedGender" name="userSelectedGender"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Male</label><br>
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949;">Terms &
+                                        Conditions</label><br>
+                                    <label for="inputState" class="form-label"
+                                        style="font-family: Poppins-semibold; font-size: 1rem; color: #494949;">Accepted</label><br>
+
+                                </div><br>
+
+                                <hr>
+                                </hr>
+
+
+                                <!-- footer start -->
+                                <div class="head-container h-100 d-flex align-items-center justify-content-center">
+                                    <h6
+                                        style="padding-top: 2%; color: black; font-family: Poppins-medium; font-size: 0.8rem;">
+                                        ©
+                                        2023 Amrutvahini Internship. All Rights Reserved.</h6>
+                                </div>
+                                <!-- footer end -->
+
+                                <div class="rows" style="display: flex; justify-content: space-between;">
+
+                                    <div class="cols"></div>
+                                    <div class="cols"></div>
+                                    <div class="cols">
+
+
+                                        <button type="button" onclick="goBack()" class="btn btn-rounded" data-mdb-ripple-color="dark"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Back</button>
+
+                                        <button type="submit" class="btn btn-rounded" data-mdb-ripple-color="dark"
+                                            style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Save
+                                            & Continue</button>
+
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content end -->
+
+
+
+    <!-- edit as per your need -->
+    <script>
+        var userReference = document.getElementById("userReference");
+        var countrySelect = document.getElementById("countrySelect");
+        var userName = document.getElementById("userName");
+        var userMobileNumber = document.getElementById("userMobileNumber");
+        var userEmailAddress = document.getElementById("userEmailAddress");
+        var userGithubProfile = document.getElementById("userGithubProfile");
+        var userLinkedinLink = document.getElementById("userLinkedinLink");
+        var userMobileNumber = document.getElementById("userMobileNumber");
+        var userEmailAddress = document.getElementById("userEmailAddress");
+        var userGithubProfile = document.getElementById("userGithubProfile");
+        var userLinkedinLink = document.getElementById("userLinkedinLink");
+        var userEducationStatus = document.getElementById("userEducationStatus");
+        var userCollegeName = document.getElementById("userCollegeName");
+        var userDegree = document.getElementById("userDegree");
+        var userFieldOfStudy = document.getElementById("userFieldOfStudy");
+        var userPassingYear = document.getElementById("userPassingYear");
+        var userState = document.getElementById("userState"); 
+        var userInternshipDuration = document.getElementById("userInternshipDuration");
+        var userSelectedGender = document.getElementById("userSelectedGender");
+        function loadData() {
+            var userSelectedPosition = document.getElementById("userSelectedPosition");
+            userSelectedPosition.textContent = getCookie("position");
+            
+            userReference.innerHTML = getCookie("userReference"); 
+            countrySelect.innerHTML = getCookie("countrySelect");
+            userName.innerHTML = getCookie("userFirstName")+" "+getCookie("userMiddleName")+getCookie("userLastName"); 
+            userMobileNumber.innerHTML = "+"+getCookie("countryCodes")+getCookie("userMobileNumber");
+            userEmailAddress.innerHTML = getCookie("userEmailAddress");
+            userGithubProfile.innerHTML = getCookie("userGithubProfile");
+            userLinkedinLink.innerHTML = getCookie("userLinkedinLink");
+            userEducationStatus.innerHTML = getCookie("userEducationStatus");
+            userCollegeName.innerHTML = getCookie("userCollegeName");
+            userDegree.innerHTML = getCookie("userDegree");
+            userFieldOfStudy.innerHTML = getCookie("userFieldOfStudy");
+            userPassingYear.innerHTML = getCookie("userPassingYear");
+            userState.innerHTML = getCookie("userState");
+            userInternshipDuration.innerHTML = getCookie("userInternshipDuration")+" Months";
+        
+
+            console.log(getCookie("userEducationStatus"));
+            
+           
+
+            //   
+            //   var userAlternateMobileNumber = document.getElementById("userAlternateMobileNumber");
+            //   var userEmailAddress = document.getElementById("userEmailAddress");
+            //   var userGithubProfile = document.getElementById("userGithubProfile");
+            //   var userLinkedinLink = document.getElementById("userLinkedinLink");
+
+            //userReference.textContent = getCookie("userReference");
+            // $(userReference).prop('selectedIndex',userReferenceint ).change();
+            // userFirstName.value=getCookie("userFirstName");
+            // userMiddleName.value=getCookie("userMiddleName");
+            // userLastName.value=getCookie("userLastName");
+            // userMobileNumber.value=getCookie("userMobileNumber");
+            // userAlternateMobileNumber.value=getCookie("userAlternateMobileNumber");
+            // userEmailAddress.value=getCookie("userEmailAddress");
+            // userGithubProfile.value=getCookie("userGithubProfile");
+            // userLinkedinLink.value=getCookie("userLinkedinLink"); 
+
+        }
+        function goBack() {
+        window.history.back();
+    }
+    </script>
+
+</body>
+<script src="../JavaScript/bootstrap.bundle.min.js"></script>
+
+</html>

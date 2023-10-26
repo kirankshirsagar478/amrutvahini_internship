@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Educational Details</title>
+
+    <!-- Css linked -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <script src="../JavaScript/script.js"></script>
+
+
+
+    <style>
+        .progresses {
+            display: flex;
+            align-items: center;
+        }
+
+        .line {
+            width: 5rem;
+            height: 3px;
+            background: #22CFB9;
+            flex-grow: 1;
+
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Center text horizontally */
+        }
+
+        .step-text {
+            margin-top: 5px;
+            font-size: 0.5rem;
+            font-family: Poppins-medium;
+
+            /* Adjust the margin to control the spacing between the circle and text */
+        }
+
+        .step span {
+            display: block;
+            /* Ensure the icon and text are on separate lines */
+        }
+
+        .step i {
+            background-color: #BDBDBD;
+            ;
+            color: #fff;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .currentsectionstext {
+
+            margin-top: 5px;
+            font-size: 0.8rem;
+            font-family: Poppins-semibold;
+
+
+        }
+
+        .mobilecard {
+            padding-left: 5rem;
+        }
+
+        .selectedline {}
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+        }
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+            .mobilecard {
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            /* Remove default outline and use border or box-shadow */
+            box-shadow: 2px solid #000;
+            /* Full freedom. (works also with border-radius) */
+        }
+
+        .terms-container {
+            max-height: 200px;
+            /* Set a maximum height for the container */
+            overflow: auto;
+            /* Add a scrollbar when content overflows */
+            border: 1px solid #ccc;
+            /* Add a border for visual separation (optional) */
+            padding: 10px;
+            /* Add padding for better readability (optional) */
+        }
+
+        input[type="password"]:focus {
+            border-color: black;
+        }
+
+        
+        select {
+            height: 2.1rem;
+            font-family: 'Poppins-semibold', 'Poppins-medium', sans-serif;
+            font-size: 0.9rem;
+            color: #494949;
+            padding-top: 0.1rem;
+            padding-left: 0.2rem;
+            border-color: #ced4da;
+        }
+
+        select:focus {
+            border-color: black;
+        }
+
+
+        .select {
+            height: 2.1rem;
+            font-family: Poppins-semibold;
+            font-family: Poppins-medium;
+            font-size: 0.9rem;
+            color: #494949;
+            padding-top: 0.1rem;
+            padding-left: 0.2rem;
+            border-color: #ced4da;
+        }
+
+
+    </style>
+
+
+
+</head>
+
+
+<body style="background-color: #F0F1F2; padding-top: 90px;" onload="loadData()">
+    <!-- Navbar start here -->
+    <nav class="navbar fixed-top shadow navbar-expand-xxl   bg-white rounded"
+        style="z-index: 100000; padding-right: 2rem;">
+        <div class="container-fluid h-100 d-flex align-items-left justify-content-right"
+            style="background-color: white;">
+            <a class="navbar-brand" href="#" style="color: #25c3ae; font-weight: 600; font-size: xx-large; ">
+                <img src="../Assets/Images/logo_with_text.png" alt="Logo" width="150" height="65"
+                    class="d-inline-block align-text-top">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link " href="../index.html" style="font-family: Poppins-semibold;">Search for Internships
+                    <a class="nav-link" href="../Pages/contact.html" style="font-family: Poppins-semibold;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navbar end -->
+
+    <!-- main content starts -->
+
+    <div class="container col-md-6 card_container_every_page">
+        <div class=" shadow">
+            <div class="col-sm col-md col-lg mt-0 custom-column">
+                <div class="card" style="width: 100%; border: none;">
+                    <div class="card-body mobilecard" style="margin-top: 1rem; ">
+                        <!-- heading start here -->
+                        <a class="job_posting_label" href="../index.html"> <i class="fa fa-arrow-left"></i> Back to Job Posting</a>
+                        <div class="head-container h-100 d-flex align-items-center justify-content  ">
+                            <h4 id="userSelectedPosition" class="designation_on_forms">Associate Software Engineer
+                            </h4>
+                        </div>
+
+                        <!-- heading end -->
+
+                        <br><br>
+
+
+
+                        <!-- search bar end -->
+
+                        <!-- Steps start here -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <div class="progresses">
+                                <div class="step">
+                                    <span><i style=" background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Basic Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text">Education Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Upload Resume</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style=" background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Additional Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="width: 1.5rem; height: 1.5rem; background-color: #22CFB9;"
+                                            class="fa fa-circle"></i></span> <span
+                                        class="step-text currentsectionstext">Terms & Conditions</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Review</span>
+                                </div>
+                                <!-- Add more steps as needed -->
+                            </div>
+                        </div>
+                        <!-- Steps end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <h4 class="card-title mb-3"
+                            style="padding-top: 5%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center;">
+                            Internship Disclaimer
+                        </h4><br>
+
+
+
+
+
+                        <form class="needs-validation" id="userTermsandConditionsForm" name="userTermsandConditionsForm" novalidate>
+
+                            <label for="inputState" class="form-label"
+                                style=" font-family: Poppins-regular; font-size: 0.8rem;"><span
+                                    style="color: red; font-family: Poppins-semibold;">*</span> indicates a required
+                                field</label>
+                            <label
+                                style="font-family: Poppins-regular; font-style: italic; font-size: 0.8rem; text-align: justify; padding-right: 1.8rem;">Amrutvahini
+                                Internship is committed to protecting your personal information. Your information will
+                                be collected, used and may be shared by Amrutvahini with third party service providers to
+                                serve lawful purposes, for Amrutvahini internship process, including processing of data
+                                by third party when required. Your information shall be held only as long as necessary
+                                to achieve the purpose for which it is collected. The use and transfer of your
+                                information will be strictly in accordance with the applicable data privacy law and in
+                                line with our privacy policy available at
+                                https://www.internship.amrutvahini.com.com/privacy-policy. Further, you agree and
+                                acknowledge that you have read Accenture’s privacy policy and fully understand your
+                                rights to access, correct or withdraw your information anytime.</label>
+                            <hr>
+                            <div class="col-md-6">
+                                <br>
+                                <label for="inputState" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Please
+                                    Indicate Your Gender <span style="color: red;">*</span></label>
+                                <select id="userSelectedGender" name="userSelectedGender" class="form-select"
+                                    style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none;" required>
+                                    <option value="" selected>Select one</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Select a valid option.</label> 
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-6">
+                                <label for="formGroupExampleInput" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Email
+                                    Address<span style="color: red;">*</span></label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" required
+                                    style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; background-color: #dddddd;"
+                                    value="jondoe@codeclause.com" b readonly><br>
+                                <label for="formGroupExampleInput" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Password
+                                    (Enter the passoword for creating account)<span style="color: red;">*</span></label>
+                                <input type="password" class="form-control" id="userPassword" name="userPassword" 
+                                    style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none;" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$"
+                                    required>
+
+                                    <div class="invalid-feedback">
+                                        <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Please enter valid password (min length 6).</label> 
+                                    </div><br>
+                            </div>
+                            <hr>
+
+
+                            <h4 class="card-title mb-3"
+                                style="padding-top: 5%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center;">
+                                Terms & Conditions
+                            </h4><br>
+
+
+                            <div class="terms-container">
+                                <label style="text-align: justify; font-family: Poppins-regular; font-size: 13px;">Lorem
+                                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem
+                                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem
+                                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</label>
+                            </div>
+
+                            <input type="checkbox" required> <label
+                                style="font-family: Poppins-semibold; margin-top: 1rem; ">Yes, I have read and consent
+                                to the terms and conditions.<span style="color: red;">*</span></label>
+
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Please accept terms and conditions.</label> 
+                                </div><br><br>
+
+                                    <hr>
+                            <!-- footer start -->
+                            <div class="head-container h-100 d-flex align-items-center justify-content-center">
+                                <h6
+                                    style="padding-top: 8%; color: black; font-family: Poppins-medium; font-size: 0.8rem;">
+                                    © 2023 Amrutvahini Internship. All Rights Reserved.</h6>
+                            </div>
+                            <!-- footer end -->
+
+                            <div class="rows" style="display: flex; justify-content: space-between;">
+
+                                <div class="cols"></div>
+                                <div class="cols"></div>
+                                <div class="cols">
+
+                                    <button type="button" class="btn btn-rounded" data-mdb-ripple-color="dark" onclick="goBack()"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Back</button>
+
+                                    <button type="submit" class="btn btn-rounded" data-mdb-ripple-color="dark"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Save
+                                        & Continue</button>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content end -->
+
+    <!-- footer start -->
+    <div class="head-container h-100 d-flex align-items-center justify-content-center">
+        <h6 style="padding-top: 2%; color: #888888;">All Rights Reserved @Amrutvahini Internship</h6>
+    </div>
+    <!-- footer end -->
+
+    <!-- edit as per your need -->
+    <script>
+        var userSelectedPosition = document.getElementById("userSelectedPosition");
+        userSelectedPosition.textContent = getCookie("position");
+        var userSelectedGender = document.getElementById("userSelectedGender");
+        var userPassword = document.getElementById("userPassword");
+
+        document.getElementById("userTermsandConditionsForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        if (this.checkValidity()) {
+            var userSelectedGender = document.getElementById("userSelectedGender");
+          var userPassword = document.getElementById("userPassword");
+          setCookie("userSelectedGenderIndex", userSelectedGender.selectedIndex);
+          setCookie("userSelectedGender", userSelectedGender.value);
+          setCookie("userPassword", userPassword.value);         
+            window.location.href = "review_details.html";
+        } else {
+            // Handle invalid form here if needed
+        }
+        });
+
+
+
+        function loadData(){
+            var userGenderint = parseInt(getCookie("userSelectedGenderIndex"));
+            userSelectedGender.selectedIndex = userGenderint;
+              
+                userPassword.value=getCookie("userPassword");
+        }
+        function goBack() {
+        window.history.back();
+    }
+
+        </script>
+
+</body>
+<script src="../JavaScript/bootstrap.bundle.min.js"></script>
+<script src="../JavaScript/myscripts.js"></script>
+
+
+</html>

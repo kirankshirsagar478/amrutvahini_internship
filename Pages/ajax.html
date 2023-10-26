@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX Call Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="loading-message">Loading...</div>
+  <div id="result"></div>
+
+  <script>
+    $(document).ready(function() {
+      // Function to handle the AJAX request
+      function makeAjaxCall(referenceId) {
+        // Display the loading message
+        $("#loading-message").text("Loading...");
+
+        // Make the AJAX call
+        $.ajax({
+          url: "reference.php", // Replace with the actual URL of your PHP file
+          type: "GET", // Use "GET" or "POST" as needed
+          data: { referenceId: referenceId }, // Pass the reference ID as a parameter
+          success: function(response) {
+            // Update the state based on the response
+            $("#result").html(response);
+
+            // Hide the loading message
+            $("#loading-message").text("");
+          },
+          error: function(error) {
+            // Handle any errors here
+            console.error("Error:", error);
+
+            // Hide the loading message
+            $("#loading-message").text("");
+          }
+        });
+      }
+
+      // Example usage - call makeAjaxCall with a reference ID
+      makeAjaxCall(123); // Replace with the desired reference ID
+    });
+  </script>
+</body>
+</html>

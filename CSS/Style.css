@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url('../Assets/Font/Poppins/Poppins-Regular.ttf') format('woff2'), /* Modern Browsers */
+       url('../Assets/Font/Poppins/Poppins-Regular.ttf') format('woff'); /* Older Browsers */
+  
+}
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../Assets/Font/Poppins/Poppins-Bold.ttf') format('woff2'), /* Modern Browsers */
+       url('../Assets/Font/Poppins/Poppins-Bold.ttf') format('woff'); /* Older Browsers */
+ 
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('../Assets/Font/Poppins/Poppins-Light.ttf') format('woff2'), /* Modern Browsers */
+       url('../Assets/Font/Poppins/Poppins-Light.ttf') format('woff'); /* Older Browsers */
+ 
+}
+
+@font-face {
+  font-family: 'Poppins-medium';
+  src: url('../Assets/Font/Poppins/Poppins-Medium.ttf') format('woff2'), /* Modern Browsers */
+       url('../Assets/Font/Poppins/Poppins-Medium.ttf') format('woff'); /* Older Browsers */
+  
+}
+
+@font-face {
+  font-family: 'Poppins-semibold';
+  src: url('../Assets/Font/Poppins/Poppins-SemiBold.ttf') format('woff2'), /* Modern Browsers */
+       url('../Assets/Font/Poppins/Poppins-SemiBold.ttf') format('woff'); /* Older Browsers */
+
+}
+
+@font-face {
+  font-family: 'Poppins-thin';
+  src: url('../Assets/Font/Poppins/Poppins-Thin.ttf') format('woff2'), /* Modern Browsers */
+       url('../Assets/Font/Poppins/Poppins-Thin.ttf') format('woff'); /* Older Browsers */
+}
+
+
+.card_container_every_page{
+  margin-top: -1rem; height: 1rem;
+}
+
+
+.job_posting_label{
+  color:#25c3ae; 
+  font-family: Poppins-regular;
+  text-decoration: none;
+}
+
+.designation_on_forms{
+  margin-top: 1.5rem;
+   font-family: Poppins-medium; 
+   font-size: 1.4rem;
+}
+
+.form-control:valid,
+.custom-select:valid,
+.form-select:valid {
+    border-color: #ced4da !important; /* Use the default border color */
+    background-image: none !important; /* Remove the background image */
+}
+
+/* Remove the green check icon for valid custom radio and checkbox inputs */
+.custom-control-input:valid ~ .custom-control-label::before {
+    border-color: #ced4da !important; /* Use the default border color */
+}
+
+/* Remove the green check icon for valid custom file inputs */
+.custom-file-input:valid ~ .custom-file-label::after {
+    border-color: #ced4da !important; /* Use the default border color */
+}
+
+*:focus {
+  outline: none;
+}
+
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+input:focus {
+  outline:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS style for the arrow animation */
+.arrow-animation {
+  transition: transform 0.3s ease; /* Transition for smooth animation */
+}
+
+/* Apply this class to the arrow icon */
+.card-link i {
+  font-size: larger;
+  padding-top: 5%;
+  transform: translateX(0); /* Initial position */
+}
+
+/* Add a hover effect to the card-link */
+.card-link:hover i.arrow-animation {
+  transform: translateX(6px); /* Adjust the distance the arrow moves */
+}
+
+/* Change background and text color for select2 */
+.select2-container .select2-selection--single {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+

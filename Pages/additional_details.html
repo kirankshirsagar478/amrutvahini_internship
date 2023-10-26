@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Educational Details</title>
+
+   <!-- Css linked -->
+   <link rel="stylesheet" href="../CSS/style.css">
+   <!-- Bootstrap link -->
+   <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+   <!-- font awesome -->
+   <link rel="stylesheet" href="../CSS/all.min.css">
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link href="../CSS/select2.min.css" rel="stylesheet" />
+   <script src="../JavaScript/select2.min.js"></script>
+   <script src="../JavaScript/script.js"></script>
+   <script src="../JavaScript/myscripts.js"></script>
+
+
+   <link rel="icon" type="image/x-icon" href="../Assets/Images/CodeClause-Recuirt-Logo.png">    
+
+    <style>
+        .progresses {
+            display: flex;
+            align-items: center;
+        }
+
+        .line {
+            width: 5rem;
+            height: 3px;
+            background: #22CFB9;
+            flex-grow: 1;
+
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Center text horizontally */
+        }
+
+        .step-text {
+            margin-top: 5px;
+            font-size: 0.5rem;
+            font-family: Poppins-medium;
+
+            /* Adjust the margin to control the spacing between the circle and text */
+        }
+
+        .step span {
+            display: block;
+            /* Ensure the icon and text are on separate lines */
+        }
+
+        .step i {
+            background-color: #BDBDBD;
+            ;
+            color: #fff;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .currentsectionstext {
+
+            margin-top: 5px;
+            font-size: 0.8rem;
+            font-family: Poppins-semibold;
+
+
+        }
+
+        .mobilecard {
+            padding-left: 5rem;
+        }
+
+        .selectedline {}
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+        }
+
+        @media only screen and (max-width:1451px) {
+            .line {
+                width: 2rem;
+                height: 3px;
+                background: #BDBDBD;
+                flex-grow: 1;
+                margin-bottom: -2rem;
+            }
+
+            .step-text {
+                display: none;
+                margin-top: 0rem;
+                font-size: 0rem;
+
+            }
+
+            .mobilecard {
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+
+        }
+    </style>
+
+
+
+</head>
+
+
+<body style="background-color: #F0F1F2; padding-top: 90px;" onload="loadData()">
+    <!-- Navbar start here -->
+    <nav class="navbar fixed-top shadow navbar-expand-xxl   bg-white rounded"
+        style="z-index: 100000; padding-right: 2rem;">
+        <div class="container-fluid h-100 d-flex align-items-left justify-content-right"
+            style="background-color: white;">
+            <a class="navbar-brand" href="#" style="color: #25c3ae; font-weight: 600; font-size: xx-large; ">
+                <img src="../Assets/Images/logo_with_text.png" alt="Logo" width="150" height="65"
+                    class="d-inline-block align-text-top">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link " href="../index.html" style="font-family: Poppins-semibold;">Search for Internship</a>
+                    <a class="nav-link" href="../Pages/contact.html" style="font-family: Poppins-semibold;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navbar end -->
+
+    <!-- main content starts -->
+
+    <div class="container col-md-6 card_container_every_page">
+        <div class=" shadow">
+            <div class="col-sm col-md col-lg mt-0 custom-column">
+                <div class="card" style="width: 100%; border: none;">
+                    <div class="card-body mobilecard" style="margin-top: 1rem; ">
+                        <!-- heading start here -->
+                        <a class="job_posting_label" href="../index.html"> <i class="fa fa-arrow-left"></i> Back to Job Posting</a>
+                        <div class="head-container h-100 d-flex align-items-center justify-content  ">
+                            <h4 id="userSelectedPosition" class="designation_on_forms">Associate Software Engineer
+                            </h4>
+                        </div>
+
+                        <!-- heading end -->
+
+                        <br><br>
+
+
+
+                        <!-- search bar end -->
+
+                        <!-- Steps start here -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <div class="progresses">
+                                <div class="step">
+                                    <span><i style=" background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Basic Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text" >Education Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="background-color: #22CFB9;" class="fa fa-check"></i></span>
+                                    <span class="step-text ">Upload Resume</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #22CFB9; "></span>
+                                <div class="step">
+                                    <span><i style="width: 1.5rem; height: 1.5rem; background-color: #22CFB9;"
+                                            class="fa fa-circle"></i></span>
+                                    <span class="step-text currentsectionstext">Additional Details</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Terms & Conditions</span>
+                                </div>
+                                <span class="line"
+                                    style="margin-top: -2rem; z-index : 10000; background-color: #BDBDBD; "></span>
+                                <div class="step">
+                                    <span><i class="fa fa-check"></i></span>
+                                    <span class="step-text">Review</span>
+                                </div>
+                                <!-- Add more steps as needed -->
+                            </div>
+                        </div>
+                        <!-- Steps end here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <h4 class="card-title mb-3"
+                            style="padding-top: 5%;font-family: Poppins-semibold; margin-top: 0.4rem; text-align: center;">
+                            Additional Details
+                        </h4><br>
+
+
+
+
+
+                        <form class="needs-validation" id="userAdditionalDetailsForm" name="userAdditionalDetailsForm" novalidate>
+                            <label for="inputState" class="form-label"
+                                style=" font-family: Poppins-regular; font-size: 0.8rem;"><span
+                                    style="color: red; font-family: Poppins-semibold;">*</span> indicates a required
+                                field</label>
+                            <div class="col-md-6">
+                                <br>
+                                <label for="inputState" class="form-label"
+                                    style="font-family: Poppins-semibold; font-size: 0.8rem; color: #494949;">Internship
+                                    Duration <span style="color: red;">*</span></label>
+                                <select id="userInternshipDuration" name="userInternshipDuration" class="form-select" style="font-family: Poppins-medium; font-size: 0.9rem; color: #494949; box-shadow: none;"
+                                    required>
+                                    <option value="" selected>Select one</option>
+                                    <option value="1">1 Month</option>
+                                    <option value="3">3 Month</option>
+                                    <option value="6">6 Month</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    <b>Error:</b> <label style="font-family: Poppins-regular; font-size: 13px;">Select a valid option.</label> 
+                                </div>
+                            </div>
+                            <!-- footer start -->
+                            <div class="head-container h-100 d-flex align-items-center justify-content-center">
+                                <h6
+                                    style="padding-top: 8%; color: black; font-family: Poppins-medium; font-size: 0.8rem;">
+                                    © 2023 Amrutvahini Internship. All Rights Reserved.</h6>
+                            </div>
+                            <!-- footer end -->
+                            <div class="rows" style="display: flex; justify-content: space-between;">
+
+                                <div class="cols"></div>
+                                <div class="cols"></div>
+                                <div class="cols">
+
+                                    <button type="button" onclick="goBack()" class="btn btn-rounded" data-mdb-ripple-color="dark"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Back</button>
+
+                                    <button type="submit" class="btn btn-rounded" data-mdb-ripple-color="dark"
+                                        style="border-radius: 20px; box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.2); background-color:#25c3ae; color: white; font-family: Poppins-medium; font-size: 0.9rem; font-weight: 500; margin-bottom: 1rem; margin-top: 2rem;">Save
+                                        & Continue</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content end -->
+
+    <!-- footer start -->
+    <div class="head-container h-100 d-flex align-items-center justify-content-center">
+        <h6 style="padding-top: 2%; color: #888888;">All Rights Reserved @CodeClause Pvt Ltd</h6>
+    </div>
+    <!-- footer end -->
+
+    <!-- edit as per your need -->
+    <script>
+         var userSelectedPosition = document.getElementById("userSelectedPosition");
+        userSelectedPosition.textContent = getCookie("position");
+        var userInternshipDuration = document.getElementById("userInternshipDuration");
+        document.getElementById("userAdditionalDetailsForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        if (this.checkValidity()) {
+            setCookie("userInternshipDurationSelectedIndex", userInternshipDuration.selectedIndex);
+            setCookie("userInternshipDuration", userInternshipDuration.value);
+            window.location.href = "terms_conditions.html";
+        } else {
+            this.classList.add('was-validated');
+        }
+        });
+
+        function goBack() {
+        window.history.back();
+    }
+
+    function loadData(){
+                var userInternshipDurationSelectedIndex = document.getElementById("userInternshipDurationSelectedIndex");
+                $(userInternshipDuration).prop('selectedIndex',parseInt(getCookie("userInternshipDurationSelectedIndex")) ).change();
+        }
+    </script>
+   <script src="../JavaScript/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
